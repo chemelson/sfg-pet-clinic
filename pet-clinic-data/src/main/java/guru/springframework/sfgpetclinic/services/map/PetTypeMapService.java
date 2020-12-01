@@ -8,7 +8,7 @@ import java.util.Set;
 
 @Service
 @Profile({"default", "map"})
-public class PetTypeService extends AbstractMapService<PetType,Long> implements guru.springframework.sfgpetclinic.services.PetTypeService
+public class PetTypeMapService extends AbstractMapService<PetType,Long> implements guru.springframework.sfgpetclinic.services.PetTypeService
 {
     @Override
     public Set<PetType> findAll() {
