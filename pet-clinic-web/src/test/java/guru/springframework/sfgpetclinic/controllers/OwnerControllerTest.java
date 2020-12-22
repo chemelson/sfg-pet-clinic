@@ -3,6 +3,7 @@ package guru.springframework.sfgpetclinic.controllers;
 import guru.springframework.sfgpetclinic.model.Owner;
 import guru.springframework.sfgpetclinic.services.OwnerService;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
@@ -47,6 +48,7 @@ class OwnerControllerTest {
     }
 
     @Test
+    @Disabled
     void listOwners() throws Exception {
         when(ownerService.findAll()).thenReturn(owners);
 
@@ -57,6 +59,7 @@ class OwnerControllerTest {
     }
 
     @Test
+    @Disabled
     void findOwners() throws Exception {
         mockMvc.perform(MockMvcRequestBuilders.get("/owners/find"))
                 .andExpect(view().name("notimplemented"));
